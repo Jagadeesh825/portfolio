@@ -49,13 +49,13 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className='min-h-screen hidden lg:flex flex-col top-[35%] left-0 fixed'>
-      <ul>
+    <div className='min-h-screen lg:flex flex-col fixed'>
+      <ul className="flex lg:ml-[-100px]">
         {links.map((link) => (
           <li
             key={link.id}
             className={`flex justify-between items-center 
-            w-48 h-16 px-4 ml-[-100px] rounded-2xl duration-300 
+            w-48 h-16 px-4 rounded-2xl duration-300 
             bg-gradient-to-t from-transparent to-sky-800 text-white ${link.style}`}
             onMouseEnter={() => setHoveredLink(link.id)}
             onMouseLeave={() => setHoveredLink(null)}>
