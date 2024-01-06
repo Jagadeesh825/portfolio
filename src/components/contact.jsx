@@ -16,9 +16,12 @@ const contact = () => {
                 <input 
                 type="text" name="email" placeholder='Enter Your Email' className='my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none'/>
                 <textarea name="message" rows="10" placeholder='type here .....'
-                className='p-2 bg-transparent border-2 rounded-md text-white  font-new focus:outline-none'></textarea>
+                className='p-10 bg-transparent border-2 rounded-md text-white  font-new focus:outline-none'></textarea>
                 <br/>
-                <button className='w-28 p font-new font-bold p-4  text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-md'>Submit</button>
+                <div className='flex justify-center items-center'>
+                <button className='w-28  font-new font-bold p-4  text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-md'>Submit</button>
+
+                </div>
             </form>
         </div>
       </div>
