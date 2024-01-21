@@ -53,7 +53,7 @@ const SocialLinks = () => {
     <div className='lg:flex lg:flex-col fixed'>
       {/* Mobile Button */}
       <button
-        className="lg:hidden fixed bottom-4 right-4 p-2 bg-gradient-to-t from-transparent to-sky-800 text-white rounded-full"
+        className="lg:hidden fixed bottom-4 right-4 p-2 bg-gradient-to-t from-transparent to-sky-800 text-white rounded-full z-50"
         onClick={() => setShowLinks(!showLinks)}
       >
         {showLinks ? 'Hide Links' : 'Show Links'}
@@ -61,7 +61,7 @@ const SocialLinks = () => {
 
       {/* Social Links */}
       {showLinks && (
-        <ul className="lg:ml-[-100px] lg:flex hidden fixed bottom-0 right-0">
+        <ul className="lg:ml-[-100px] lg:flex flex-col fixed bottom-16 right-4 z-40">
           {links.map((link) => (
             <li
               key={link.id}
