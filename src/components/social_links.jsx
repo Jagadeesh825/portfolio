@@ -4,6 +4,7 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 const SocialLinks = () => {
+  const [showLinks, setShowLinks] = useState(false);
   const [hoveredLink, setHoveredLink] = useState(null);
 
   const links = [
@@ -49,29 +50,42 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className='min-h-screen hidden lg:flex flex-col top-[35%] left-0 fixed'>
-      <ul>
-        {links.map((link) => (
-          <li
-            key={link.id}
-            className={`flex justify-between items-center 
-            w-48 h-16 px-4 ml-[-100px] rounded-2xl duration-300 
-            bg-gradient-to-t from-transparent to-sky-800 text-white ${link.style}`}
-            onMouseEnter={() => setHoveredLink(link.id)}
-            onMouseLeave={() => setHoveredLink(null)}>
-            <a
-              href={link.href}
-              className="flex justify-between items-center w-full">
-              {hoveredLink === link.id && (
-                <span className="absolute top-0 left-full p-2 bg-black text-white rounded-md">
-                  {link.child}
-                </span>
-              )}
-              {link.child}
-            </a>
-          </li>
-        ))}
-      </ul>
+    <div className='lg:flex lg:flex-col fixed'>
+      {/* Mobile Button */}
+      <button
+        className="lg:hidden fixed bottom-4 right-4 p-2 bg-gradient-to-t from-transparent to-sky-800 text-white rounded-full"
+        onClick={() => setShowLinks(!showLinks)}
+      >
+        {showLinks ? 'Hide Links' : 'Show Links'}
+      </button>
+
+      {/* Social Links */}
+      {showLinks && (
+        <ul className="lg:ml-[-100px] lg:flex hidden fixed bottom-0 right-0">
+          {links.map((link) => (
+            <li
+              key={link.id}
+              className={`flex justify-between items-center 
+                w-48 h-16 px-4 rounded-2xl duration-300 
+                bg-gradient-to-t from-transparent to-sky-800 text-white ${link.style}`}
+              onMouseEnter={() => setHoveredLink(link.id)}
+              onMouseLeave={() => setHoveredLink(null)}
+            >
+              <a
+                href={link.href}
+                className="flex justify-between items-center w-full"
+              >
+                {hoveredLink === link.id && (
+                  <span className="absolute top-0 left-full p-2 bg-black text-white rounded-md">
+                    {link.child}
+                  </span>
+                )}
+                {link.child}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
