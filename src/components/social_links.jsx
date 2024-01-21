@@ -84,21 +84,19 @@ const SocialLinks = () => {
   );
 
   const desktopView = (
-    <div className='lg:flex lg:flex-col fixed'>
-      <ul className="lg:ml-[-100px] lg:flex hidden fixed bottom-0 right-0">
+    <div className='min-h-screen lg:flex flex-col fixed'>
+      <ul className="flex lg:ml-[-100px]">
         {links.map((link) => (
           <li
             key={link.id}
             className={`flex justify-between items-center 
-              w-48 h-16 px-4 rounded-2xl duration-300 
-              bg-gradient-to-t from-transparent to-sky-800 text-white ${link.style}`}
+            w-48 h-16 px-4 rounded-2xl duration-300 
+            bg-gradient-to-t from-transparent to-sky-800 text-white ${link.style}`}
             onMouseEnter={() => setHoveredLink(link.id)}
-            onMouseLeave={() => setHoveredLink(null)}
-          >
+            onMouseLeave={() => setHoveredLink(null)}>
             <a
               href={link.href}
-              className="flex justify-between items-center w-full"
-            >
+              className="flex justify-between items-center w-full">
               {hoveredLink === link.id && (
                 <span className="absolute top-0 left-full p-2 bg-black text-white rounded-md">
                   {link.child}
