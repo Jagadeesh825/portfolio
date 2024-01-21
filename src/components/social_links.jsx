@@ -50,12 +50,12 @@ const SocialLinks = () => {
   ];
 
   const mobileView = (
-    <div className='lg:hidden fixed bottom-4 right-4 p-2 bg-gradient-to-t from-transparent to-sky-800 text-white rounded-full'>
+    <div className='lg:hidden fixed bottom-4 right-4 p-2 bg-gradient-to-t from-transparent to-sky-800 text-white rounded-full z-50'>
       <button onClick={() => setShowLinks(!showLinks)}>
         {showLinks ? 'Hide Links' : 'Show Links'}
       </button>
       {showLinks && (
-        <ul className="lg:flex flex-col fixed bottom-16 right-4">
+        <ul className="lg:flex flex-col fixed bottom-16 right-4 z-40">
           {links.map((link) => (
             <li
               key={link.id}
@@ -93,10 +93,12 @@ const SocialLinks = () => {
             w-48 h-16 px-4 rounded-2xl duration-300 
             bg-gradient-to-t from-transparent to-sky-800 text-white ${link.style}`}
             onMouseEnter={() => setHoveredLink(link.id)}
-            onMouseLeave={() => setHoveredLink(null)}>
+            onMouseLeave={() => setHoveredLink(null)}
+          >
             <a
               href={link.href}
-              className="flex justify-between items-center w-full">
+              className="flex justify-between items-center w-full"
+            >
               {hoveredLink === link.id && (
                 <span className="absolute top-0 left-full p-2 bg-black text-white rounded-md">
                   {link.child}
