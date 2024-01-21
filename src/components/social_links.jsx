@@ -4,7 +4,7 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 const SocialLinks = () => {
-  const [showLinks, setShowLinks] = useState(false);
+  const [showLinks, setShowLinks] = useState(true);
   const [hoveredLink, setHoveredLink] = useState(null);
 
   const links = [
