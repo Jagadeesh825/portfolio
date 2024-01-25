@@ -10,7 +10,7 @@ const Home = () => {
         <div className="md:w-2/3 md:pr-8">
           <h2 className="text-3xl sm:text-7xl font-bold text-white mb-2">I'm a Frontend <br />developer</h2>
           <p className="text-gray-500 mb-0 font-new font-bold text-2xl ">
-  Hi, I'm Jagadeesh Kumar S, a passionate Web developer with a strong foundation. I have been dedicating the past two years to learning and mastering various Web technologies. My goal is to create engaging and user-friendly web experiences.
+  "Hey, I'm Jagadeesh Kumar S, ready to dive into web development. Armed with a range of skills, I'm excited to learn and become a proficient web developer, crafting awesome online experiences."
 </p>
           <div className="pt-5 place-content-center">
           <Link to="portfolio" smooth={true} duration={500} className=" text-white px-8 py-4 rounded-3xl font-new font-extrabold bg-gradient-to-t from-blue-700 to-blue-900 cursor-pointer">
