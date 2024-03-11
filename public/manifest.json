@@ -1,6 +1,10 @@
 {
   "short_name": "PortFolio",
+<<<<<<< HEAD
   "name": "PortFolio",
+=======
+  "name": "portFolio",
+>>>>>>> aae49350603456e1da9434b00ddcc90dc450d126
   "icons": [
     {
       "src": "portfolio.png",

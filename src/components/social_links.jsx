@@ -4,7 +4,11 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 const SocialLinks = () => {
+<<<<<<< HEAD
   const [showLinks, setShowLinks] = useState(false);
+=======
+  const [showLinks, setShowLinks] = useState(true);
+>>>>>>> aae49350603456e1da9434b00ddcc90dc450d126
 
   const links = [
     {
@@ -51,13 +55,22 @@ const SocialLinks = () => {
   return (
     <div className='min-h-screen lg:flex flex-col fixed'>
       {/* Desktop View */}
+<<<<<<< HEAD
       <ul className="flex">
+=======
+      <ul className="flex lg:ml-[-100px]">
+>>>>>>> aae49350603456e1da9434b00ddcc90dc450d126
         {links.map((link) => (
           <li
             key={link.id}
             className={`flex justify-between items-center 
+<<<<<<< HEAD
               w-48 h-16 px-4 rounded-2xl duration-300 
               bg-gradient-to-t from-transparent to-sky-800 text-white ${link.style}`}
+=======
+            w-48 h-16 px-4 rounded-2xl duration-300 
+            bg-gradient-to-t from-transparent to-sky-800 text-white ${link.style}`}
+>>>>>>> aae49350603456e1da9434b00ddcc90dc450d126
           >
             <a
               href={link.href}
@@ -75,13 +88,22 @@ const SocialLinks = () => {
           {showLinks ? 'Hide Links' : 'Show Links'}
         </button>
         {showLinks && (
+<<<<<<< HEAD
           <ul className="flex flex-col fixed bottom-16 right-4 z-40">
+=======
+          <ul className="lg:flex flex-col fixed bottom-16 right-4 z-40">
+>>>>>>> aae49350603456e1da9434b00ddcc90dc450d126
             {links.map((link) => (
               <li
                 key={link.id}
                 className={`flex justify-between items-center 
+<<<<<<< HEAD
                     w-48 h-16 px-4 rounded-2xl duration-300 
                     bg-gradient-to-t from-transparent to-sky-800 text-white ${link.style}`}
+=======
+                  w-48 h-16 px-4 rounded-2xl duration-300 
+                  bg-gradient-to-t from-transparent to-sky-800 text-white ${link.style}`}
+>>>>>>> aae49350603456e1da9434b00ddcc90dc450d126
               >
                 <a
                   href={link.href}
