@@ -61,7 +61,7 @@ const Projects = () => {
     ];
 
     return (
-        <div className='w-full bg-gradient-to-t from-black to-indigo-950 min-h-screen py-12 md:py-24'>
+        <div className='w-full bg-gradient-to-t from-indigo-950 to-black min-h-screen py-12 md:py-24'>
             <div className='max-w-screen-lg mx-auto p-4'>
                 <div className='mb-8'>
                     <p className='text-4xl font-new text-white font-bold border-b-4 inline-block border-gray-600'>Projects</p>
