@@ -4,7 +4,7 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 const SocialLinks = () => {
-  const [hoveredLink, setHoveredLink] = useState(null);
+  const [showLinks, setShowLinks] = useState(false);
 
   const links = [
     {
@@ -50,28 +50,50 @@ const SocialLinks = () => {
 
   return (
     <div className='min-h-screen lg:flex flex-col fixed'>
-      <ul className="flex lg:ml-[-100px]">
+      {/* Desktop View */}
+      <ul className="flex">
         {links.map((link) => (
           <li
             key={link.id}
             className={`flex justify-between items-center 
-            w-48 h-16 px-4 rounded-2xl duration-300 
-            bg-gradient-to-t from-transparent to-sky-800 text-white ${link.style}`}
-            onMouseEnter={() => setHoveredLink(link.id)}
-            onMouseLeave={() => setHoveredLink(null)}>
+              w-48 h-16 px-4 rounded-2xl duration-300 
+              bg-gradient-to-t from-transparent to-sky-800 text-white ${link.style}`}
+          >
             <a
               href={link.href}
-              className="flex justify-between items-center w-full">
-              {hoveredLink === link.id && (
-                <span className="absolute top-0 left-full p-2 bg-black text-white rounded-md">
-                  {link.child}
-                </span>
-              )}
+              className="flex justify-between items-center w-full"
+            >
               {link.child}
             </a>
           </li>
         ))}
       </ul>
+
+      {/* Mobile Button and Links */}
+      <div className='lg:hidden fixed bottom-4 right-4 p-2 bg-gradient-to-t from-transparent to-sky-800 text-white rounded-full z-50'>
+        <button onClick={() => setShowLinks(!showLinks)}>
+          {showLinks ? 'Hide Links' : 'Show Links'}
+        </button>
+        {showLinks && (
+          <ul className="flex flex-col fixed bottom-16 right-4 z-40">
+            {links.map((link) => (
+              <li
+                key={link.id}
+                className={`flex justify-between items-center 
+                    w-48 h-16 px-4 rounded-2xl duration-300 
+                    bg-gradient-to-t from-transparent to-sky-800 text-white ${link.style}`}
+              >
+                <a
+                  href={link.href}
+                  className="flex justify-between items-center w-full"
+                >
+                  {link.child}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 };
