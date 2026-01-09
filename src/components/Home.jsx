@@ -1,5 +1,5 @@
 import React from 'react';
-import Profile from '../assets/ppt.jpg';
+import Profile from '../assets/PT.png';
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 
