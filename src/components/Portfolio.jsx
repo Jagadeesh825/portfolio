@@ -39,6 +39,12 @@ const Portfolio = () => {
             link: "https://www.coursera.org/verify/W328DYJRC6S9",
             name:   "Python"
         },
+        {
+            id: 5,
+            src: comptia security,
+            link: "https://www.udemy.com/certificate/UC-b5aef2be-1f20-434e-87d7-a6d1aec3b9b6/",
+            name:   "comptia security +"
+        },
     ]
 
     return (
